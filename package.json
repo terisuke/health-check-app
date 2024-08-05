@@ -1,0 +1,26 @@
+{
+  "name": "health-check-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",
+    "deploy": "gcloud functions deploy dialogflowWebhook --runtime nodejs18 --trigger-http --allow-unauthenticated --entry-point dialogflowWebhook"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/actions-on-google": "^2.0.1",
+    "@types/dialogflow-fulfillment": "^0.6.1",
+    "@types/twilio": "^3.19.3",
+    "actions-on-google": "^2.14.0",
+    "dialogflow-fulfillment": "^0.6.1",
+    "dotenv": "^16.4.5",
+    "firebase-functions": "^5.0.1",
+    "ts-node": "^10.9.2",
+    "twilio": "^5.2.2",
+    "typescript": "^5.5.4"
+  }
+}

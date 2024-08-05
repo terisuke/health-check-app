@@ -1,0 +1,4 @@
+# envファイルをgit管理しない
+.env
+# node_modulesをgit管理しない
+node_modules
