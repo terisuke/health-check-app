@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc",
-    "deploy": "gcloud functions deploy dialogflowWebhook --runtime nodejs18 --trigger-http --allow-unauthenticated --entry-point dialogflowWebhook"
+    "deploy": "gcloud functions deploy dialogflowWebhook --runtime nodejs18 --trigger-http --allow-unauthenticated --entry-point dialogflowWebhook && gcloud functions deploy scheduledCall --runtime nodejs18 --trigger-http --allow-unauthenticated --entry-point scheduledCall"
   },
   "keywords": [],
   "author": "",
