@@ -6,12 +6,13 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc",
-    "deploy": "gcloud functions deploy dialogflowWebhook --runtime nodejs18 --trigger-http --allow-unauthenticated --entry-point dialogflowWebhook && gcloud functions deploy scheduledCall --runtime nodejs18 --trigger-http --allow-unauthenticated --entry-point scheduledCall"
+    "deploy": "gcloud functions deploy dialogflowWebhook --runtime nodejs18 --trigger-http --allow-unauthenticated --entry-point dialogflowWebhook && gcloud functions deploy scheduledCall --runtime nodejs18 --trigger-http --allow-unauthenticated --entry-point scheduledCall && gcloud functions deploy callStatusCallback --runtime nodejs18 --trigger-http --allow-unauthenticated --entry-point callStatusCallback"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@google-cloud/secret-manager": "^5.6.0",
     "@types/actions-on-google": "^2.0.1",
     "@types/dialogflow-fulfillment": "^0.6.1",
     "@types/twilio": "^3.19.3",
